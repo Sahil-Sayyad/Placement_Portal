@@ -1,8 +1,13 @@
+//import all required packages
+const Employee = require("../models/employee");
 module.exports.home = async (req, res) => {
-    if (req.isAuthenticated()) {
-      return res.redirect("/");
-    }
+  try {
+    let employee = await Employee.find({});
     return res.render("home", {
       title: "Placement Cell",
     });
-  };
+  } catch (err) {
+    console.log(`error in home controller ${err}`);
+    return;
+  }
+};

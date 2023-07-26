@@ -1,10 +1,20 @@
 //import requried packeges
-const express = require('express');
+const express = require("express");
 const router = express.Router();
+const passport = require("passport");
 
-//home controller for home page 
-const employeeController = require('../controllers/employee_Controller');
+const employeeController = require("../controllers/employee_Controller");
 
-router.get('/sign-up', employeeController.signUp);
-router.post('/create', employeeController.create);
-module.exports= router;
+router.get("/sign-up", employeeController.signUp);
+router.get("/sign-in", employeeController.signIn);
+router.post("/create", employeeController.create);
+router.post(
+  "/create-session",
+  passport.authenticate("local", { failureRedirect: "employees/sign-up" }),
+  employeeController.createSession
+);
+router.get("/sign-out", employeeController.destroySession);
+// Forget password.
+router.get("/forget-password", employeeController.forgetPasswordPage);
+router.post("/forget-password-page", employeeController.forgetPasswordLink);
+module.exports = router;

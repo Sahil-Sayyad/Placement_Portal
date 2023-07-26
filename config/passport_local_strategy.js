@@ -2,6 +2,7 @@
 const passport = require("passport");
 const LocalStrategy = require("passport-local").Strategy;
 const Employee = require("../models/employee");
+const bcrypt = require("bcrypt");
 
 //authentication using passport
 passport.use(
@@ -13,8 +14,10 @@ passport.use(
 
     async function (req, email, password, done) {
       let employee = await Employee.findOne({ email: email });
-      if (!employee || employee.password != password) {
-        // req.flash('error', 'Invalid Username / Password  ');
+      // console.log(employee);
+      const isPasswordMatched = bcrypt.compareSync(password, employee.password);
+      if (!employee || !isPasswordMatched) {
+        req.flash('error', 'Invalid Username / Password  ');
         console.log("Invalid Username / Password  ");
         return done(null, false);
       }
@@ -30,7 +33,7 @@ passport.serializeUser(function (employee, done) {
 });
 
 //deserializing the employee from the key in the cookies
-passport.deserializeUser(async function (id, doen) {
+passport.deserializeUser(async function (id, done) {
   let employeeID = await Employee.findById(id);
   if (!employeeID) {
     console.log("Error in config/passport-local");
@@ -41,7 +44,7 @@ passport.deserializeUser(async function (id, doen) {
 });
 
 //check if employee is authenticated
-passport.checkauthetication = function (req, res, next) {
+passport.checkAuthentication = function (req, res, next) {
   //if the employee is signed in then the pass on the request to next controller action.
   if (req.isAuthenticated()) {
     return next();
@@ -51,9 +54,9 @@ passport.checkauthetication = function (req, res, next) {
   return res.redirect("/employees/sign-in");
 };
 
-passport.checkAuthecticatedEmployee = function (req, res, next) {
+passport.setAuthenticatedEmployee = function (req, res, next) {
   if (req.isAuthenticated()) {
-    res.locals.employee = req.employee;
+    res.locals.employee = req.user;
   }
 
   next();
