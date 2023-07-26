@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Interview Details</title>
+  <link href="https://unpkg.com/tailwindcss@^1.0/dist/tailwind.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="/stylesheets/interview_details.css">
+
+  </head>
+  <body>
+    <header class="text-gray-600 body-font">
+      <div class="container mx-auto flex flex-wrap p-5 flex-col md:flex-row items-center">
+        <a class="flex title-font font-medium items-center text-gray-900 mb-4 md:mb-0">
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-10 h-10 text-white p-2 bg-purple-500 rounded-full" viewBox="0 0 24 24">
+            <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"></path>
+          </svg>
+          <span class="ml-3 text-xl">Placement Cell</span>
+        </a>
+        <nav class="md:ml-auto md:mr-auto flex flex-wrap items-center text-base justify-center">
+          <a class="mr-5 hover:text-gray-900">Home</a>
+          <a class="mr-5 hover:text-gray-900">Interview Page</a>
+          <a class="mr-5 hover:text-gray-900">Student Page</a>
+          <!-- <a class="mr-5 hover:text-gray-900">Fourth Link</a> -->
+        </nav>
+        <button class="inline-flex items-center bg-gray-100 border-0 py-1 px-3 focus:outline-none hover:bg-gray-200 rounded text-base mt-4 md:mt-0">Sign Out
+          <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-4 h-4 ml-1" viewBox="0 0 24 24">
+            <path d="M5 12h14M12 5l7 7-7 7"></path>
+          </svg>
+        </button>
+      </div>
+    </header>
+    <section class="text-gray-600 body-font">
+      <div class="container px-5 py-24 mx-auto">
+        <div class="flex items-center lg:w-3/5 mx-auto border-b pb-1 mb-1 border-gray-200 sm:flex-row flex-col">
+          <div class="sm:w-32 sm:h-32 h-20 w-20 sm:mr-10 inline-flex items-center justify-center rounded-full bg-purple-100 text-purple-500 flex-shrink-0">
+            <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="sm:w-16 sm:h-16 w-10 h-10" viewBox="0 0 24 24">
+              <path d="M22 12h-4l-3 9L9 3l-3 9H2"></path>
+            </svg>
+          </div>
+          <div class="flex-grow sm:text-left text-center mt-6 sm:mt-0">
+            <h2 class="text-gray-900 text-lg title-font font-medium mb-2"><%= interview.companyName %></h2>
+            <p class="leading-relaxed text-base">Blue bottle crucifix vinyl post-ironic four dollar toast vegan taxidermy. Gastropub indxgo juice poutine.</p>
+            <a class="mt-3 text-purple-500 inline-flex items-center"><%= interview.date %>
+            </a>
+          </div>
+        </div>
+        </div>
+    </section>
+    <section class="text-gray-600 body-font mx-auto">
+      <div class="container px-5 mx-auto">
+        <div class="flex flex-col text-center w-full mb-20">
+          <h1 class="sm:text-3xl text-2xl font-medium title-font mb-4 text-gray-900">Students List</h1>
+        </div>
+        
+        <div class="flex flex-wrap -m-2">
+          <% interview.students.forEach(student => { %>
+        <div class="p-2 lg:w-1/3 md:w-1/2 w-full">
+          <div class="h-full flex items-center border-gray-200 border p-4 rounded-lg">
+            <img alt="team" class="w-16 h-16 bg-gray-100 object-cover object-center flex-shrink-0 rounded-full mr-4" src="/images/google.png">
+            <div class="flex-grow">
+              <h2 class="text-gray-900 title-font font-medium"><%= student.name %></h2>
+              <p class="text-gray-500"> Batch : <%= student.batch %></p>
+              <p class="text-gray-500"> College : <%= student.college %></p>
+              <p class="text-gray-500"> Status : <%= student.status %></p>
+              <p class="text-gray-500"> DSAFinalScore : <%= student.DSAFinalScore %></p>
+              <p class="text-gray-500"> WebDFinalScore : <%= student.WebDFinalScore %></p>
+              <p class="text-gray-500"> ReactFinalScore : <%=student.ReactFinalScore %></p>
+            </div>
+          </div>
+        </div>
+        <% }); %>
+      </div>
+    </div>
+  </section>
+  <section class="text-gray-600 body-font">
+    <div class="container px-5 py-24 mx-auto">
+      <div class="flex flex-col text-center w-full mb-8">
+        <h1 class="sm:text-3xl text-2xl font-medium title-font mb-4 text-gray-900">Mark Result Status</h1>
+      </div>
+    <form action="/interviews/<%= interview._id %>/result" method="POST">
+      <div class="flex lg:w-2/3 w-full sm:flex-row flex-col mx-auto px-8 sm:space-x-4 sm:space-y-0 space-y-4 sm:px-0 items-end">
+        <div class="relative flex-grow w-full">
+          <label for="full-name" class="leading-7 text-sm text-gray-600"> Name</label>
+          <select name="studentId" required class="w-full bg-gray-100 bg-opacity-50 rounded border border-gray-300 focus:border-purple-500 focus:bg-transparent focus:ring-2 focus:ring-purple-200 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out">
+            <% interview.students.forEach(student => { %>
+            <option value="<%= student._id %>"><%= student.name %></option>
+            <% }); %>
+          </select>
+        </div>
+        <div class="relative flex-grow w-full">
+          <label for="result" class="leading-7 text-sm text-gray-600">Result</label>
+          <select name="result" required class="w-full bg-gray-100 bg-opacity-50 rounded border border-gray-300 focus:border-purple-500 focus:bg-transparent focus:ring-2 focus:ring-purple-200 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out">
+            <option value="PASS">PASS</option>
+            <option value="FAIL">FAIL</option>
+            <option value="On Hold">On Hold</option>
+            <option value="Didn't Attempt">Didn't Attempt</option>
+          </select>
+        </div>
+        <button class="text-white bg-purple-500 border-0  py-1 px-10 focus:outline-none hover:bg-purple-600 rounded ">Mark</button>
+        </form>
+      </div>
+    </div>
+  </section>
+  <section class="text-gray-600 body-font">
+    <div class="container px-5 py-24 mx-auto">
+      <div class="flex flex-col text-center w-full mb-8">
+        <h1 class="sm:text-3xl text-2xl font-medium title-font mb-4 text-gray-900">Allocate New Student</h1>
+      </div>
+      <form action="/interviews/<%= interview._id %>/allocate" method="POST">
+      <div class="flex lg:w-2/3 w-full sm:flex-row flex-col mx-auto px-8 sm:space-x-4 sm:space-y-0 space-y-4 sm:px-0 items-end">
+        <div class="relative flex-grow w-full">
+          <label for="studentId">Select Student </label>
+          <select name="studentId" required class="w-full bg-gray-100 bg-opacity-50 rounded border border-gray-300 focus:border-purple-500 focus:bg-transparent focus:ring-2 focus:ring-purple-200 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out">
+            <% students.forEach(student => { %>
+              <option value="<%= student._id %>"><%= student.name %></option>
+            <% }); %>
+          </select>
+        </div>
+        <button class="text-white bg-purple-500 border-0  py-1 px-10 focus:outline-none hover:bg-purple-600 rounded ">Allocate</button>
+        </form>
+      </div>
+    </div>
+  </section>
+   
+    <!-- Add a button to allocate a new student to the interview -->
+  <footer class="text-gray-600 body-font">
+    <div class="container px-5 py-8 mx-auto flex items-center sm:flex-row flex-col">
+      <a class="flex title-font font-medium items-center md:justify-start justify-center text-gray-900">
+        <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-10 h-10 text-white p-2 bg-purple-500 rounded-full" viewBox="0 0 24 24">
+          <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"></path>
+        </svg>
+        <span class="ml-3 text-xl">Placement Cell</span>
+      </a>
+      <p class="text-sm text-gray-500 sm:ml-4 sm:pl-4 sm:border-l-2 sm:border-gray-200 sm:py-2 sm:mt-0 mt-4">© 2023 Placement Cell 
+        <a href="/interviews/" class="text-gray-600 ml-1" rel="noopener noreferrer" >Interviews</a>
+        <a href="/" class="text-gray-600 ml-1 " rel="noopener noreferrer" >Home</a>
+      </p>
+      <span class="inline-flex sm:ml-auto sm:mt-0 mt-4 justify-center sm:justify-start">
+        <a class="text-gray-500">
+          <svg fill="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-5 h-5" viewBox="0 0 24 24">
+            <path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z"></path>
+          </svg>
+        </a>
+        <a class="ml-3 text-gray-500">
+          <svg fill="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-5 h-5" viewBox="0 0 24 24">
+            <path d="M23 3a10.9 10.9 0 01-3.14 1.53 4.48 4.48 0 00-7.86 3v1A10.66 10.66 0 013 4s-4 9 5 13a11.64 11.64 0 01-7 2c9 5 20 0 20-11.5a4.5 4.5 0 00-.08-.83A7.72 7.72 0 0023 3z"></path>
+          </svg>
+        </a>
+        <a class="ml-3 text-gray-500">
+          <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-5 h-5" viewBox="0 0 24 24">
+            <rect width="20" height="20" x="2" y="2" rx="5" ry="5"></rect>
+            <path d="M16 11.37A4 4 0 1112.63 8 4 4 0 0116 11.37zm1.5-4.87h.01"></path>
+          </svg>
+        </a>
+        <a class="ml-3 text-gray-500">
+          <svg fill="currentColor" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="0" class="w-5 h-5" viewBox="0 0 24 24">
+            <path stroke="none" d="M16 8a6 6 0 016 6v7h-4v-7a2 2 0 00-2-2 2 2 0 00-2 2v7h-4v-7a6 6 0 016-6zM2 9h4v12H2z"></path>
+            <circle cx="4" cy="4" r="2" stroke="none"></circle>
+          </svg>
+        </a>
+      </span>
+    </div>
+  </footer>
+  </body>       
+</html>

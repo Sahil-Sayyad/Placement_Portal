@@ -12,16 +12,17 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/noty/3.1.4/noty.min.js"></script>
   </head>
   <body>
+    <h1>Welcome To Placement Portal</h1>
     <ul class="nav-links">
-      <% if(employee){ %> 
-      <li><a href="#"><%=employee.name %></a></li>
+      <% if(employee){ %>
+      <li><a href="/profile"><%=employee.name %></a></li>
       <li class="forward"><a href="/employees/sign-out">Sing Out</a></li>
       <% } else{%>
       <li class="center"><a href="/employees/sign-up">Sign Up</a></li>
       <% } %>
-      <li class="upward"><a href="#">Services</a></li>
-      <li class="forward"><a href="#">Feedback</a></li>
-      <li class="forward"><a href="#">Feedback</a></li>
+      <li class="upward"><a href="/students/">Students</a></li>
+      <li class="forward"><a href="/interviews/">Interviews</a></li>
+      <li class="forward"><a href="/jobs/fetch-jobs">Jobs</a></li>
     </ul>
   </body>
 

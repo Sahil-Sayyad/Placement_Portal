@@ -6,12 +6,18 @@
   box-sizing: border-box;
   font-family: 'Poppins', sans-serif;
 }
+h1{
+  position: relative;
+  top: -5.0rem;
+  font-weight: bolder;
+}
 body{
   height: 100vh;
   display: flex;
   align-items: center;
   justify-content: center;
   background: #c1f7f5;
+  flex-direction: column;
 }
 .nav-links{
   display: flex;
