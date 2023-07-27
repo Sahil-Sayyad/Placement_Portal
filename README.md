@@ -70,18 +70,23 @@ Positive-Admit] and send patient id in params.</i> <br><br>
 
 ## Project Demo
 -  <b> <i> Home Page  </i></b> <br><br>
-![placement_cell_home](https://github.com/Sahil-Sayyad/Placement_Cell/assets/96423459/c624b796-9ba8-4518-80ee-3f291fbd9f49)
+![placement_cell_home](https://github.com/Sahil-Sayyad/Placement_Cell/assets/96423459/90576da3-65ef-4875-9fd8-9a3274a93bfc)
+
 -  <b> <i> Students Details  Page  </i></b> <br><br>
-![placement_cell_students](https://github.com/Sahil-Sayyad/Placement_Cell/assets/96423459/4d381ff6-486d-41db-a101-149261ee123d)
+![placement_cell_students](https://github.com/Sahil-Sayyad/Placement_Cell/assets/96423459/2d9ab7ef-9cb2-4eec-88e2-f149b7d7c75f)
+
 -  <b> <i> Interviews Details  Page  </i></b> <br><br>
-![placement_Cell_interviews](https://github.com/Sahil-Sayyad/Placement_Cell/assets/96423459/d067085a-ec22-4bed-8555-37c627a1590e)
+![placement_Cell_interviews](https://github.com/Sahil-Sayyad/Placement_Cell/assets/96423459/9d57cb47-5943-4eac-9091-d24447928a7a)
+
 -  <b> <i> Interviews Company Details  Page  </i></b> <br><br>
-![interview_company_details](https://github.com/Sahil-Sayyad/Placement_Cell/assets/96423459/66da0b3a-fed3-4c04-8590-275f71cee315)
+![interview_company_details](https://github.com/Sahil-Sayyad/Placement_Cell/assets/96423459/c6870aff-001e-4d75-ad4d-56a82b89e746)
+
 -  <b> <i> Job Details  Page  </i></b> <br><br>
-![placement_cell_jobs](https://github.com/Sahil-Sayyad/Placement_Cell/assets/96423459/053ac7b6-76ae-4385-9017-865762f38dce)
+![placement_Cell_JObs](https://github.com/Sahil-Sayyad/Placement_Cell/assets/96423459/b633c0d0-7e15-4a9b-8c79-8c34d5430dd8)
+
 -  <b> <i> CSV File  </i></b> <br><br>
 
-![placement_Cell_JObs](https://github.com/Sahil-Sayyad/Placement_Cell/assets/96423459/37eb2470-975c-453f-abf2-d960abab0712)
+![placement_cell_CSV](https://github.com/Sahil-Sayyad/Placement_Cell/assets/96423459/58abc198-9f83-46c7-a33a-508ec541a669)
 
 ## Author
 
