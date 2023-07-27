@@ -20,7 +20,10 @@ use]. <b>
 -  <b> list of interviews (view all interviews)</b>
 -  <b> Employees can add new interview </b>
 -  <b> Employees can Allocate a student to an interview</b>
--  <b> Lists all the reports of all the patients filtered by a specific status</b>
+-  <b> view the list of all students for a specific interview </b>
+-  <b> mark a result status</b>
+-  <b> External Jobs List </b>
+-  <b> Download a complete CSV of all the data of students  </b>
 
 ## Getting Started
 -  <b> 1. &nbsp; Clone Git Repo  </b>
@@ -59,7 +62,26 @@ Positive-Admit] and send patient id in params.</i> <br><br>
 -  <b> MongoDB </b>
 -  <b> Mongoose </b>
 -  <b> Postman </b>
+-  <b> HTML </b>
+-  <b> CSS </b>
+-  <b> Tailwind CSS </b>
+-  <b> EJS </b>
+-  <b> JavaScript </b>
+
+##Project Demo
+-  <b> <i> Home Page  </i></b> <br><br>
+![placement_cell_home](https://github.com/Sahil-Sayyad/Placement_Cell/assets/96423459/c624b796-9ba8-4518-80ee-3f291fbd9f49)
+-  <b> <i> Students Details  Page  </i></b> <br><br>
+![placement_cell_students](https://github.com/Sahil-Sayyad/Placement_Cell/assets/96423459/4d381ff6-486d-41db-a101-149261ee123d)
+-  <b> <i> Interviews Details  Page  </i></b> <br><br>
+![placement_Cell_interviews](https://github.com/Sahil-Sayyad/Placement_Cell/assets/96423459/d067085a-ec22-4bed-8555-37c627a1590e)
+-  <b> <i> Interviews Company Details  Page  </i></b> <br><br>
+![interview_company_details](https://github.com/Sahil-Sayyad/Placement_Cell/assets/96423459/66da0b3a-fed3-4c04-8590-275f71cee315)
+-  <b> <i> Job Details  Page  </i></b> <br><br>
+![placement_cell_jobs](https://github.com/Sahil-Sayyad/Placement_Cell/assets/96423459/053ac7b6-76ae-4385-9017-865762f38dce)
+
 ## Author
+
 
 - Name: Sahil Sayyad
 - GitHub: <a><b>https://github.com/Sahil-Sayyad</a></b>
