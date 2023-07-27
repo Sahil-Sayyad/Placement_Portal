@@ -1,3 +1,4 @@
+const fetch = require('node-fetch');
 const url = 'https://www.themuse.com/api/public/jobs?category=Software%20Engineer&category=Software%20Engineering&page=2';
 
 // Route to fetch jobs 
