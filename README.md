@@ -79,6 +79,8 @@ Positive-Admit] and send patient id in params.</i> <br><br>
 ![interview_company_details](https://github.com/Sahil-Sayyad/Placement_Cell/assets/96423459/66da0b3a-fed3-4c04-8590-275f71cee315)
 -  <b> <i> Job Details  Page  </i></b> <br><br>
 ![placement_cell_jobs](https://github.com/Sahil-Sayyad/Placement_Cell/assets/96423459/053ac7b6-76ae-4385-9017-865762f38dce)
+-  <b> <i> CSV File  </i></b> <br><br>
+![placement_cell_CSV](https://github.com/Sahil-Sayyad/Placement_Cell/assets/96423459/5bbf9f1f-26d6-45fc-833d-a7c3e6ca1288)
 
 ## Author
 
