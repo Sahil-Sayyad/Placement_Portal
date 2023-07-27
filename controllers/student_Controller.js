@@ -12,11 +12,12 @@ module.exports.allStudents = async (req, res) => {
   }
 };
 
-//Add new student (from to create a student )
 
+//Add new student (from to create a student )
 module.exports.create = async (req, res) => {
   try {
     await Student.create(req.body);
+    req.flash('success', 'Student Added Successfully');
     return res.redirect("/students");
   } catch (err) {
     console.log(`Error in create student controller ${err}`);

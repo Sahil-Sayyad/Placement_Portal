@@ -15,13 +15,16 @@ passport.use(
     async function (req, email, password, done) {
       let employee = await Employee.findOne({ email: email });
       // console.log(employee);
-      const isPasswordMatched = bcrypt.compareSync(password, employee.password);
-      if (!employee || !isPasswordMatched) {
-        req.flash('error', 'Invalid Username / Password  ');
-        console.log("Invalid Username / Password  ");
-        return done(null, false);
+      if(employee){
+        const isPasswordMatched = bcrypt.compareSync(password, employee.password);
+        if (!employee || !isPasswordMatched) {
+          req.flash("error", "Invalid Username / Password  ");
+          req.flash("error", "Don't have an account? Sign Up ");
+          console.log("Invalid Username / Password  ");
+          return done(null, false);
+        }
+        
       }
-
       return done(null, employee);
     }
   )

@@ -1,8 +1,6 @@
 //import all required packages
-const Employee = require("../models/employee");
 module.exports.home = async (req, res) => {
   try {
-    let employee = await Employee.find({});
     return res.render("home", {
       title: "Placement Cell",
     });
@@ -11,9 +9,10 @@ module.exports.home = async (req, res) => {
     return;
   }
 };
+
+// rendering profile ejs 
 module.exports.profile = async (req, res) => {
   try {
-    let employee = await Employee.find({});
     return res.render("profile", {
       title: "Placement Cell",
     });

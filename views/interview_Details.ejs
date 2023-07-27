@@ -3,25 +3,34 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Interview Details</title>
-  <link href="https://unpkg.com/tailwindcss@^1.0/dist/tailwind.min.css" rel="stylesheet">
-  <link rel="stylesheet" href="/stylesheets/interview_details.css">
+    <title>Placement Cell | Interview Details</title>
+
+    <!-- linking css stylesheets  -->
+    <link rel="icon" type="image/x-icon" href="/images/favicon.png">
+    <link href="https://unpkg.com/tailwindcss@^1.0/dist/tailwind.min.css" rel="stylesheet">
+   <link rel="stylesheet" href="/stylesheets/interview_details.css">
+   <link
+    rel="stylesheet"
+   href="https://cdnjs.cloudflare.com/ajax/libs/noty/3.1.4/noty.min.css"
+   />
+
+   <!-- linking javascripts cdn for flash messages -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/noty/3.1.4/noty.min.js"></script>
 
   </head>
   <body>
+    <!-- header  -->
     <header class="text-gray-600 body-font">
       <div class="container mx-auto flex flex-wrap p-5 flex-col md:flex-row items-center">
         <a class="flex title-font font-medium items-center text-gray-900 mb-4 md:mb-0">
-          <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-10 h-10 text-white p-2 bg-purple-500 rounded-full" viewBox="0 0 24 24">
-            <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"></path>
-          </svg>
+          <svg xmlns="http://www.w3.org/2000/svg"  viewBox="0 0 48 48" width="48px" height="48px"><path fill="#0079be" d="M27.605,40.637C36.699,40.68,45,33.22,45,24.144C45,14.22,36.699,7.36,27.605,7.363h-7.827	C10.575,7.36,3,14.222,3,24.144c0,9.078,7.575,16.536,16.778,16.492H27.605z"/><path fill="#fff" d="M19.815,8.738C11.406,8.741,4.591,15.557,4.589,23.97c0.002,8.412,6.817,15.227,15.226,15.23	c8.412-0.003,15.228-6.819,15.229-15.23C35.043,15.557,28.227,8.741,19.815,8.738z M10.164,23.97L10.164,23.97	c0.008-4.111,2.575-7.617,6.196-9.01v18.018C12.739,31.586,10.172,28.082,10.164,23.97z M23.27,32.982L23.27,32.982V14.96	c3.622,1.39,6.193,4.897,6.2,9.01C29.463,28.085,26.891,31.59,23.27,32.982z"/><linearGradient id="KknhlWBW17Od_nHxRMHnTa" x1="6.434" x2="35.441" y1="6.522" y2="35.529" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#199ae0"/><stop offset="1" stop-color="#0782d8"/></linearGradient><path fill="url(#KknhlWBW17Od_nHxRMHnTa)" d="M27.605,41C36.699,41.044,45,33.421,45,24.148C45,14.006,36.699,6.997,27.605,7h-7.827	C10.575,6.997,3,14.008,3,24.148C3,33.423,10.575,41.044,19.778,41H27.605z"/><linearGradient id="KknhlWBW17Od_nHxRMHnTb" x1="7.191" x2="39.285" y1="11.192" y2="43.286" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#fff"/><stop offset=".242" stop-color="#f2f2f2"/><stop offset="1" stop-color="#ccc"/></linearGradient><path fill="url(#KknhlWBW17Od_nHxRMHnTb)" d="M19.999,9C11.715,9.003,5.002,15.716,5,24.001C5.002,32.285,11.715,38.997,19.999,39	c8.286-0.003,15-6.715,15.001-14.999C34.999,15.716,28.285,9.003,19.999,9z M10.491,24.001L10.491,24.001	c0.008-4.049,2.537-7.501,6.103-8.873v17.744C13.028,31.501,10.499,28.05,10.491,24.001z M23.401,32.876L23.401,32.876V15.127	c3.568,1.369,6.101,4.823,6.107,8.874C29.502,28.053,26.969,31.505,23.401,32.876z"/></svg>
           <span class="ml-3 text-xl">Placement Cell</span>
         </a>
         <nav class="md:ml-auto md:mr-auto flex flex-wrap items-center text-base justify-center">
-          <a class="mr-5 hover:text-gray-900">Home</a>
-          <a class="mr-5 hover:text-gray-900">Interview Page</a>
-          <a class="mr-5 hover:text-gray-900">Student Page</a>
-          <!-- <a class="mr-5 hover:text-gray-900">Fourth Link</a> -->
+          <a class="mr-5 hover:text-gray-900" href="/">Home</a>
+          <a class="mr-5 hover:text-gray-900" href="/interviews/">Interviews</a>
+          <a class="mr-5 hover:text-gray-900" href="/students/">Students</a>
+          <a class="mr-5 hover:text-gray-900" href="/jobs/fetch-jobs">Jobs</a>
         </nav>
         <button class="inline-flex items-center bg-gray-100 border-0 py-1 px-3 focus:outline-none hover:bg-gray-200 rounded text-base mt-4 md:mt-0">Sign Out
           <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-4 h-4 ml-1" viewBox="0 0 24 24">
@@ -30,23 +39,27 @@
         </button>
       </div>
     </header>
+
+    <!-- company Details  -->
     <section class="text-gray-600 body-font">
       <div class="container px-5 py-24 mx-auto">
         <div class="flex items-center lg:w-3/5 mx-auto border-b pb-1 mb-1 border-gray-200 sm:flex-row flex-col">
           <div class="sm:w-32 sm:h-32 h-20 w-20 sm:mr-10 inline-flex items-center justify-center rounded-full bg-purple-100 text-purple-500 flex-shrink-0">
-            <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="sm:w-16 sm:h-16 w-10 h-10" viewBox="0 0 24 24">
-              <path d="M22 12h-4l-3 9L9 3l-3 9H2"></path>
-            </svg>
+    
+          <img alt="team" class="w-16 h-16 bg-gray-100 object-cover object-center flex-shrink-0 rounded-full mr-4" src="/images/company.png">
+
           </div>
           <div class="flex-grow sm:text-left text-center mt-6 sm:mt-0">
             <h2 class="text-gray-900 text-lg title-font font-medium mb-2"><%= interview.companyName %></h2>
-            <p class="leading-relaxed text-base">Blue bottle crucifix vinyl post-ironic four dollar toast vegan taxidermy. Gastropub indxgo juice poutine.</p>
+            <p class="leading-relaxed text-base">Lorem ipsum dolor sit amet consectetur adipisicing elit. Laudantium eaque nostrum ad, autem laboriosam cum explicabo omnis commodi. Quod odit libero neque esse dicta iste sit, voluptatum deleniti nemo ab!</p>
             <a class="mt-3 text-purple-500 inline-flex items-center"><%= interview.date %>
             </a>
           </div>
         </div>
         </div>
     </section>
+
+    <!-- list of all students who allocate to this company -->
     <section class="text-gray-600 body-font mx-auto">
       <div class="container px-5 mx-auto">
         <div class="flex flex-col text-center w-full mb-20">
@@ -57,7 +70,8 @@
           <% interview.students.forEach(student => { %>
         <div class="p-2 lg:w-1/3 md:w-1/2 w-full">
           <div class="h-full flex items-center border-gray-200 border p-4 rounded-lg">
-            <img alt="team" class="w-16 h-16 bg-gray-100 object-cover object-center flex-shrink-0 rounded-full mr-4" src="/images/google.png">
+            <img alt="team" class="w-16 h-16 bg-gray-100 object-cover object-center flex-shrink-0 rounded-full mr-4" src="/images/dummy-profile.png">
+
             <div class="flex-grow">
               <h2 class="text-gray-900 title-font font-medium"><%= student.name %></h2>
               <p class="text-gray-500"> Batch : <%= student.batch %></p>
@@ -73,6 +87,8 @@
       </div>
     </div>
   </section>
+
+  <!-- mark a result status -->
   <section class="text-gray-600 body-font">
     <div class="container px-5 py-24 mx-auto">
       <div class="flex flex-col text-center w-full mb-8">
@@ -102,6 +118,8 @@
       </div>
     </div>
   </section>
+
+  <!-- Allocate a student to an interview -->
   <section class="text-gray-600 body-font">
     <div class="container px-5 py-24 mx-auto">
       <div class="flex flex-col text-center w-full mb-8">
@@ -121,20 +139,19 @@
         </form>
       </div>
     </div>
-  </section>
-   
-    <!-- Add a button to allocate a new student to the interview -->
+  </section>  
+  <!-- footer  -->
   <footer class="text-gray-600 body-font">
     <div class="container px-5 py-8 mx-auto flex items-center sm:flex-row flex-col">
       <a class="flex title-font font-medium items-center md:justify-start justify-center text-gray-900">
-        <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-10 h-10 text-white p-2 bg-purple-500 rounded-full" viewBox="0 0 24 24">
-          <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"></path>
-        </svg>
+        <svg xmlns="http://www.w3.org/2000/svg"  viewBox="0 0 48 48" width="48px" height="48px"><path fill="#0079be" d="M27.605,40.637C36.699,40.68,45,33.22,45,24.144C45,14.22,36.699,7.36,27.605,7.363h-7.827	C10.575,7.36,3,14.222,3,24.144c0,9.078,7.575,16.536,16.778,16.492H27.605z"/><path fill="#fff" d="M19.815,8.738C11.406,8.741,4.591,15.557,4.589,23.97c0.002,8.412,6.817,15.227,15.226,15.23	c8.412-0.003,15.228-6.819,15.229-15.23C35.043,15.557,28.227,8.741,19.815,8.738z M10.164,23.97L10.164,23.97	c0.008-4.111,2.575-7.617,6.196-9.01v18.018C12.739,31.586,10.172,28.082,10.164,23.97z M23.27,32.982L23.27,32.982V14.96	c3.622,1.39,6.193,4.897,6.2,9.01C29.463,28.085,26.891,31.59,23.27,32.982z"/><linearGradient id="KknhlWBW17Od_nHxRMHnTa" x1="6.434" x2="35.441" y1="6.522" y2="35.529" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#199ae0"/><stop offset="1" stop-color="#0782d8"/></linearGradient><path fill="url(#KknhlWBW17Od_nHxRMHnTa)" d="M27.605,41C36.699,41.044,45,33.421,45,24.148C45,14.006,36.699,6.997,27.605,7h-7.827	C10.575,6.997,3,14.008,3,24.148C3,33.423,10.575,41.044,19.778,41H27.605z"/><linearGradient id="KknhlWBW17Od_nHxRMHnTb" x1="7.191" x2="39.285" y1="11.192" y2="43.286" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#fff"/><stop offset=".242" stop-color="#f2f2f2"/><stop offset="1" stop-color="#ccc"/></linearGradient><path fill="url(#KknhlWBW17Od_nHxRMHnTb)" d="M19.999,9C11.715,9.003,5.002,15.716,5,24.001C5.002,32.285,11.715,38.997,19.999,39	c8.286-0.003,15-6.715,15.001-14.999C34.999,15.716,28.285,9.003,19.999,9z M10.491,24.001L10.491,24.001	c0.008-4.049,2.537-7.501,6.103-8.873v17.744C13.028,31.501,10.499,28.05,10.491,24.001z M23.401,32.876L23.401,32.876V15.127	c3.568,1.369,6.101,4.823,6.107,8.874C29.502,28.053,26.969,31.505,23.401,32.876z"/></svg>
         <span class="ml-3 text-xl">Placement Cell</span>
       </a>
       <p class="text-sm text-gray-500 sm:ml-4 sm:pl-4 sm:border-l-2 sm:border-gray-200 sm:py-2 sm:mt-0 mt-4">© 2023 Placement Cell 
-        <a href="/interviews/" class="text-gray-600 ml-1" rel="noopener noreferrer" >Interviews</a>
         <a href="/" class="text-gray-600 ml-1 " rel="noopener noreferrer" >Home</a>
+        <a href="/interviews/" class="text-gray-600 ml-1" rel="noopener noreferrer" >Interviews</a>
+        <a href="/students/" class="text-gray-600 ml-1 " rel="noopener noreferrer" >Students</a>
+        <a href="/jobs/fetch-jobs" class="text-gray-600 ml-1 " rel="noopener noreferrer" >Jobs</a>
       </p>
       <span class="inline-flex sm:ml-auto sm:mt-0 mt-4 justify-center sm:justify-start">
         <a class="text-gray-500">
@@ -162,5 +179,29 @@
       </span>
     </div>
   </footer>
+  
+  <!-- linking external javascripts  -->
+    <script>
+    <% if(flash.success && flash.success.length > 0){%>
+                new Noty({
+                theme:'sunset',
+                text: '<h3><%= flash.success%></h3>',
+                type:'success',
+                layout:'topRight',
+                timeout:3000
+            }).show();
+            <% } %>
+
+            <% if(flash.error && flash.error.length > 0){%>
+              new Noty({
+                theme:'sunset',
+                text: '<%= flash.error%>',
+                type:'error',
+                layout:'topRight',
+                timeout:3000
+              }).show();
+            <% } %>
+  </script>
+ 
   </body>       
 </html>
