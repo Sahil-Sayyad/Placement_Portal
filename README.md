@@ -55,6 +55,16 @@ use]. <b>
 -  <b> JavaScript </b>
 
 ## Project Demo
+ - <b> <i> Login Page  </i></b> <br><br>
+ ![placement_cell_login](https://github.com/Sahil-Sayyad/Placement_Cell/assets/96423459/c630a65a-6272-4c82-b618-b6a29137f5fa)
+
+-  <b> <i> Sign Up  Page  </i></b> <br><br>
+![Placement_cell_Signup](https://github.com/Sahil-Sayyad/Placement_Cell/assets/96423459/7695cf67-afe2-4899-b9fe-3f6e06e4c044)
+
+-  <b> <i> Forget Password Page  </i></b> <br><br>
+
+![Placement_Cell_forget](https://github.com/Sahil-Sayyad/Placement_Cell/assets/96423459/10010f56-0ef3-494c-bc11-03a63b8f7929)
+
 -  <b> <i> Home Page  </i></b> <br><br>
 ![placement_cell_home](https://github.com/Sahil-Sayyad/Placement_Cell/assets/96423459/90576da3-65ef-4875-9fd8-9a3274a93bfc)
 
