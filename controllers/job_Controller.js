@@ -2,7 +2,7 @@ const url = 'https://www.themuse.com/api/public/jobs?category=Software%20Enginee
 
 // Route to fetch jobs 
 // fetches real available jobs
-module.exports.fetch = async (req, res) => {
+module.exports.Fetch = async (req, res) => {
   try {
     const response = await fetch(url);
     const data = await response.json();
