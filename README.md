@@ -68,7 +68,7 @@ Positive-Admit] and send patient id in params.</i> <br><br>
 -  <b> EJS </b>
 -  <b> JavaScript </b>
 
-##Project Demo
+## Project Demo
 -  <b> <i> Home Page  </i></b> <br><br>
 ![placement_cell_home](https://github.com/Sahil-Sayyad/Placement_Cell/assets/96423459/c624b796-9ba8-4518-80ee-3f291fbd9f49)
 -  <b> <i> Students Details  Page  </i></b> <br><br>
