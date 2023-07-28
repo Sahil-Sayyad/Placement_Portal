@@ -184,7 +184,7 @@
 
 const fetchDataToDownload = () => {
     axios
-      .get("http://localhost:8000/students/download-csv")
+      .get("process.env.PORT/students/download-csv")
       .then(({ data }) => {
         window.open(data.downloadURL, "blank");
       })
