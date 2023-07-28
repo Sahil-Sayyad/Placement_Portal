@@ -47,7 +47,9 @@ use]. <b>
 
 ## Tech Stack
 
--  <b> Node.js</b>
+-  <b> 1.Front-end </b>
+    <p>HTML, CSS, Tailwind CSS , JavaScript: For creating the user interface and handling client-side interactions.
+       For building a dynamic and responsive user interface, especially for the External Jobs List page</p>
 -  <b> Express.js </b>
 -  <b> Passport.js </b>
 -  <b> MongoDB </b>
