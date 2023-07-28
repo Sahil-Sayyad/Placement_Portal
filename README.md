@@ -50,16 +50,18 @@ use]. <b>
 -  <b> 1.Front-end </b>
     <p>HTML, CSS, Tailwind CSS , JavaScript: For creating the user interface and handling client-side interactions.
        For building a dynamic and responsive user interface, especially for the External Jobs List page</p>
--  <b> Express.js </b>
--  <b> Passport.js </b>
--  <b> MongoDB </b>
--  <b> Mongoose </b>
--  <b> Postman </b>
--  <b> HTML </b>
--  <b> CSS </b>
--  <b> Tailwind CSS </b>
--  <b> EJS </b>
--  <b> JavaScript </b>
+- <b> 2.Back-end </b>
+   <p>Node.js: For server-side development and handling API requests.
+      Express.js: As a framework to create the application's server-side routes and manage the HTTP requests and responses.
+      MongoDB: As the database to store and manage the student, interview, and result data.</p>
+-  <b> 3. Authentication </b>
+    <p>Passport.js: For implementing the authentication system and managing user sign-up and sign-in.</p>
+-  <b> 4. CSV Export</b>
+    <p>fast-csv: A Node.js library used to generate the CSV file with the required student and interview data.</p>
+-  <b> 5. External API Integration </b>
+   <p> Axios: A promise-based HTTP client for Node.js, used to fetch job data from the GitHub Jobs API and other open APIs</p>
+-  <b> 6.Deployment </b>
+   <p>The application was deployed using cloud services like render, depending on the preferred platform.</p>
 
 ## Project Demo
  - <b> <i> Login Page  </i></b> <br><br>
