@@ -10,7 +10,7 @@ router.get("/sign-in", employeeController.signIn);
 router.post("/create", employeeController.create);
 router.post(
   "/create-session",
-  passport.authenticate("local", { failureRedirect: "back" }, failureFlash:"Don't have an account? Sign Up" }),
+  passport.authenticate("local", { failureRedirect: "back" , failureFlash:"Don't have an account? Sign Up" }),
   employeeController.createSession
 );
 router.get("/sign-out", employeeController.destroySession);
