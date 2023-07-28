@@ -1,6 +1,6 @@
 
 // const url = 'https://www.themuse.com/api/public/jobs?category=Software%20Engineer&category=Software%20Engineering&page=2';
-
+const fetch = require('node-fetch');
 // Route to fetch jobs 
 // fetches real available jobs
 module.exports.Fetch = async (req, res) => {
