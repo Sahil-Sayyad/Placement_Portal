@@ -13,17 +13,20 @@ use]. <b>
 -  <b> [Author](#Author)</b>
 
 ## Features
--  <b> Employees can Register </b>
--  <b> Employees can log in  </b>
--  <b> list the all students (view all students)</b>
--  <b> Employees can Add new student</b>
--  <b> list of interviews (view all interviews)</b>
--  <b> Employees can add new interview </b>
--  <b> Employees can Allocate a student to an interview</b>
--  <b> view the list of all students for a specific interview </b>
--  <b> mark a result status</b>
--  <b> External Jobs List </b>
--  <b> Download a complete CSV of all the data of students  </b>
+-  <b>1. Authentication System </b>
+     <p>The web application had a secure sign-up and sign-in system exclusively for company employees. This ensured that only authorized users could access and manage the data.</p>
+-  <b> 2. Student Database Management  </b>
+    <p>Employees could view and manage a list of students, including their batch, college, and placement status (placed or not placed). The application allowed adding new students to the database with their respective course scores, such as DSA Final Score, WebD Final Score, and React Final Score.</p>
+-  <b> 3. Interview Scheduling</b>
+    <p> The application provided a section to create and manage interviews, where employees could specify the company name and date for each interview.</p>
+-  <b> 4. Student Allocation </b>
+    <p>Employees had the ability to allocate students to specific interviews. This helped in organizing and tracking the interview process efficiently.</p>
+-  <b> 5. Result Mapping </b>
+    <p>The application had a feature to map the results of interviews for each student, indicating whether they passed, failed, were on hold, or didn't attempt the interview</p>
+-  <b> 6. External Jobs List </b>
+   <p>Additionally, the application featured a minimalistic page that fetched real available jobs in India for React and Node.js using open APIs. The job details were retrieved from APIs such as GitHub Jobs API.</p>
+-  <b> 7. CSV Data Export </b>
+-  <p> Lastly, employees could download a complete CSV file containing all the relevant data, including student ID, name, college, placement status, course scores, interview date, company name, and interview result. This export functionality made it easier for the company to compile reports.</p>
 
 ## Getting Started
 -  <b> 1. &nbsp; Clone Git Repo  </b>
