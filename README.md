@@ -99,5 +99,5 @@ use]. <b>
 
 - Name: Sahil Sayyad
 - GitHub: <a><b>[https://github.com/Sahil-Sayyad](https://github.com/Sahil-Sayyad/Placement_Cell)</a></b>
-- Email: []
-- Website: []
+- Email: 
+- Website: 
