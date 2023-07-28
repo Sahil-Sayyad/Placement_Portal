@@ -30,6 +30,8 @@ use]. <b>
     <br>----<i> git clone https://github.com/Sahil-Sayyad/Placement_Cell.git </i><br><br>
 -  <b> 2.  &nbsp;Install NPM dependencies </b>
    <br>----<i> npm install</i> <br><br>
+-  <b> 2.  &nbsp;Set Up .env file  </b>
+   <br>----<i> add mongodb your url</i> <br><br>
 -  <b> 3. &nbsp; Then simply start your app </b>
    <br>----<i>npm start </i><br><br>
 
