@@ -6,7 +6,8 @@ const fs = require("fs");
 module.exports.allStudents = async (req, res) => {
   try {
     const students = await Student.find();
-    return res.render("student", { students });
+    const BASE_URL = process.env.BASE_URL;
+    return res.render("student", { students , BASE_URL });
   } catch (err) {
     console.log(`Error in view all students controller ${err}`);
     return;
@@ -49,7 +50,7 @@ module.exports.downloadCSV = async (req, res) => {
 
     writeableStream.on("finish", function () {
       return res.json({
-        downloadURL: `http://localhost:8000/files/export/students.csv`,
+       downloadURL: `${process.env.BASE_URL}/files/export/students.csv`,
       });
     });
     if (students.length > 0) {
