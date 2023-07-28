@@ -21,6 +21,9 @@
   },
   "homepage": "https://github.com/Sahil-Sayyad/Placement_Cell#readme",
   "dependencies": {
+    "@babel/core": "^7.22.9",
+    "@babel/preset-env": "^7.22.9",
+    "@babel/register": "^7.22.5",
     "axios": "^1.4.0",
     "bcrypt": "^5.1.0",
     "connect-flash": "^0.1.1",
