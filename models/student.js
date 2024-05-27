@@ -3,6 +3,10 @@ const mongoose = require("mongoose");
 
 const studentSchema = new mongoose.Schema(
   {
+    user: {
+      type: mongoose.Schema.Types.ObjectId,
+      ref: "Employee",
+    },
     name: String, //name of student
     batch: String, // Batch name or number
     college: String, // Name of the college

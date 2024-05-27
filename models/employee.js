@@ -15,6 +15,18 @@ const employeeSchema = new mongoose.Schema(
     name: {
       type: String,
     },
+    students: [
+      {
+        type: mongoose.Schema.Types.ObjectId,
+        ref: "Student",
+      },
+    ],
+    interviews: [
+      {
+        type: mongoose.Schema.Types.ObjectId,
+        ref: "Interview",
+      },
+    ],
   },
   {
     timestamps: true,

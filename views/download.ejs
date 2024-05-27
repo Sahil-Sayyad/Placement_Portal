@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Placement Portal | Students</title>
+
+    <!-- linking css stylesheets -->
+    <link rel="icon" type="image/x-icon" href="/images/favicon.png">
+    <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/noty/3.1.4/noty.min.css"
+    />
+    <!-- linking javascripts for flash messages -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/noty/3.1.4/noty.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/1.4.0/axios.min.js" integrity="sha512-uMtXmF28A2Ab/JJO2t/vYhlaa/3ahUOgj1Zf27M5rOo8/+fcTUVH0/E0ll68njmjrLqOBjXM3V9NiPFL5ywWPQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <link href="https://unpkg.com/tailwindcss@^1.0/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="/stylesheets/student.css" />
+  </head>
+
+  <body>
+    <!-- header  -->
+    <header class="text-gray-600 body-font">
+      <div class="container mx-auto flex flex-wrap p-5 flex-col md:flex-row items-center">
+        <a class="flex title-font font-medium items-center text-gray-900 mb-4 md:mb-0">
+          <svg xmlns="http://www.w3.org/2000/svg"  viewBox="0 0 48 48" width="48px" height="48px"><path fill="#0079be" d="M27.605,40.637C36.699,40.68,45,33.22,45,24.144C45,14.22,36.699,7.36,27.605,7.363h-7.827	C10.575,7.36,3,14.222,3,24.144c0,9.078,7.575,16.536,16.778,16.492H27.605z"/><path fill="#fff" d="M19.815,8.738C11.406,8.741,4.591,15.557,4.589,23.97c0.002,8.412,6.817,15.227,15.226,15.23	c8.412-0.003,15.228-6.819,15.229-15.23C35.043,15.557,28.227,8.741,19.815,8.738z M10.164,23.97L10.164,23.97	c0.008-4.111,2.575-7.617,6.196-9.01v18.018C12.739,31.586,10.172,28.082,10.164,23.97z M23.27,32.982L23.27,32.982V14.96	c3.622,1.39,6.193,4.897,6.2,9.01C29.463,28.085,26.891,31.59,23.27,32.982z"/><linearGradient id="KknhlWBW17Od_nHxRMHnTa" x1="6.434" x2="35.441" y1="6.522" y2="35.529" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#199ae0"/><stop offset="1" stop-color="#0782d8"/></linearGradient><path fill="url(#KknhlWBW17Od_nHxRMHnTa)" d="M27.605,41C36.699,41.044,45,33.421,45,24.148C45,14.006,36.699,6.997,27.605,7h-7.827	C10.575,6.997,3,14.008,3,24.148C3,33.423,10.575,41.044,19.778,41H27.605z"/><linearGradient id="KknhlWBW17Od_nHxRMHnTb" x1="7.191" x2="39.285" y1="11.192" y2="43.286" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#fff"/><stop offset=".242" stop-color="#f2f2f2"/><stop offset="1" stop-color="#ccc"/></linearGradient><path fill="url(#KknhlWBW17Od_nHxRMHnTb)" d="M19.999,9C11.715,9.003,5.002,15.716,5,24.001C5.002,32.285,11.715,38.997,19.999,39	c8.286-0.003,15-6.715,15.001-14.999C34.999,15.716,28.285,9.003,19.999,9z M10.491,24.001L10.491,24.001	c0.008-4.049,2.537-7.501,6.103-8.873v17.744C13.028,31.501,10.499,28.05,10.491,24.001z M23.401,32.876L23.401,32.876V15.127	c3.568,1.369,6.101,4.823,6.107,8.874C29.502,28.053,26.969,31.505,23.401,32.876z"/></svg>
+          <span class="ml-3 text-xl">Placement Portal</span>
+        </a>
+        <nav class="md:ml-auto md:mr-auto flex flex-wrap items-center text-base justify-center">
+          <a class="mr-5 hover:text-gray-900" href="/">Home</a>
+          <a class="mr-5 hover:text-gray-900" href="/students/">Students</a>
+          <a class="mr-5 hover:text-gray-900" href="/interviews/">Interviews</a>
+          <a class="mr-5 hover:text-gray-900" href="/jobs/fetch-jobs">Jobs</a>
+          <a class="mr-5 hover:text-gray-900" href="/download-csv/">Download CSV</a>
+
+        </nav>
+        <button class="inline-flex items-center bg-gray-100 border-0 py-1 px-3 focus:outline-none hover:bg-gray-200 rounded text-base mt-4 md:mt-0"><a href="/employees/sign-out">Sign Out</a>
+          <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-4 h-4 ml-1" viewBox="0 0 24 24">
+            <path d="M5 12h14M12 5l7 7-7 7"></path>
+          </svg>
+        </button>
+      </div>
+    </header>
+
+    <!-- main container -->
+    <main>
+      <div class="flex mx-auto  mb-8 mx-8 py-8 px-8">
+          <button class="flex items-center mx-auto text-white bg-purple-500 border-0 py-2 px-8 focus:outline-none hover:bg-purple-600 rounded text-lg" onclick="fetchDataToDownload()">Download CSV</a></button>
+
+      </div>
+
+
+    
+
+    </main>
+    <!-- footer  -->
+    
+
+    <!-- linking external javascripts -->
+    <!-- <script src="/javascripts/student.js"></script> -->
+    <script>
+
+const fetchDataToDownload = () => {
+    axios
+      .get(`<%=BASE_URL%>/students/download-csv`)
+      .then(({ data }) => {
+        window.open(data.downloadURL, "blank");
+      })
+      .catch((error) => {
+        console.log(error);
+        alert("Error Happened");
+      });
+  };
+      <% if(flash.success && flash.success.length > 0){%>
+                  new Noty({
+                  theme:'sunset',
+                  text: '<h3><%= flash.success%></h3>',
+                  type:'success',
+                  layout:'topRight',
+                  timeout:3000
+              }).show();
+              <% } %>
+  
+              <% if(flash.error && flash.error.length > 0){%>
+                new Noty({
+                  theme:'sunset',
+                  text: '<%= flash.error%>',
+                  type:'error',
+                  layout:'topRight',
+                  timeout:3000
+                }).show();
+              <% } %>
+    </script>
+
+  </body>
+</html>

@@ -1,11 +1,14 @@
 //import all required packages
 const Interview = require("../models/interview");
 const Student = require("../models/student");
-
+const Employee = require("../models/employee")
 //list of interviews (view all interviews)
 module.exports.allInterviews = async (req, res) => {
   try {
-    let interviews = await Interview.find();
+    let employee = await Employee.findById(req.user.id).
+    populate("interviews");
+
+    const interviews = employee.interviews;
     return res.render("interview", { interviews });
   } catch (err) {
     console.log(`Error in view all interviews controller ${err}`);
@@ -16,9 +19,17 @@ module.exports.allInterviews = async (req, res) => {
 //add new interview (form to create an interview )
 module.exports.create = async (req, res) => {
   try {
-    await Interview.create(req.body);
-    req.flash("success", "Interview Added Successfully");
-    return res.redirect("/interviews");
+    const employee = await Employee.findById(req.user.id);
+    if(employee){
+      const interview = await Interview.create(req.body);
+      interview.user = req.user.id;
+      //add to student to employee
+      employee.interviews.push(interview);
+      employee.save();
+      interview.save();
+      req.flash("success", "Interview Added Successfully");
+      return res.redirect("/interviews");
+    }
   } catch (err) {
     console.log(`Error in create controller ${err}`);
     return;
@@ -48,7 +59,7 @@ module.exports.interviewDetails = async (req, res) => {
     const interview = await Interview.findById(req.params.interviewId).populate(
       "students"
     );
-    const students = await Student.find();
+    const students = interview.students;
     return res.render("interview_Details", {
       interview,
       students,

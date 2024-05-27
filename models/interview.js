@@ -2,6 +2,10 @@
 const mongoose = require("mongoose");
 
 const interviewSchema = new mongoose.Schema({
+  user: {
+    type: mongoose.Schema.Types.ObjectId,
+    ref: "Employee",
+  },
   companyName: String,
   date: Date,
   students: [

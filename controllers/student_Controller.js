@@ -2,10 +2,14 @@
 const Student = require("../models/student");
 const csv = require("fast-csv");
 const fs = require("fs");
+const Employee = require("../models/employee");
 //list the all students (view all students)
 module.exports.allStudents = async (req, res) => {
   try {
-    const students = await Student.find();
+    let employee = await Employee.findById(req.user.id).
+    populate("students");
+
+    const students = employee.students;
     const BASE_URL = process.env.BASE_URL;
     return res.render("student", { students , BASE_URL });
   } catch (err) {
@@ -17,12 +21,21 @@ module.exports.allStudents = async (req, res) => {
 //Add new student (from to create a student )
 module.exports.create = async (req, res) => {
   try {
-    await Student.create(req.body);
-    req.flash("success", "Student Added Successfully");
-    return res.redirect("/students");
+    const employee = await Employee.findById(req.user.id);
+    if(employee){
+      const student = await Student.create(req.body);
+      student.user = req.user.id;
+      //add to student to employee
+      employee.students.push(student);
+      employee.save();
+      student.save();
+      req.flash("success", "Student Added Successfully");
+      return res.redirect("/students");
+    }
   } catch (err) {
     console.log(`Error in create student controller ${err}`);
-    return;
+    req.flash("success", "Please Fill Correct Fields");
+    return res.redirect("back");
   }
 };
 
