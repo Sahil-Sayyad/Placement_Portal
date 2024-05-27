@@ -1,11 +1,12 @@
 # Placement Portal
   
- <b>  I developed a web application called "Placement Portal," which was a Placement Cell management system for a company. The main goal was to create an interface where employees could input data into the database and then download it in CSV format to compile various reports.
-Problem Statement:
-A company constantly needs to download their data to compile different reports. You need to create an
-interface for the employees of this company to fill in the data into the database and then download it in CSV
-format.Team Career Camp wants to maintain a database of all the student interviews [only for their own
-use]. <b> 
+ <b>  I developed a web application called "Placement Portal," which was a Placement Cell management system for a company. The main goal was to create an interface where employees could input data into the database and then download it in CSV format to compile various reports. <b> 
+# Deployed Link 
+ <b>[Live Link](https://placement-cell-ol2b.onrender.com)</b>
+ 
+ <b>Test user</b>
+     <p>username: test@gmail.com</p>
+     <p>password: test </p>
 
 ## Table of Contents
 -  <b> [Features](#features)</b>
